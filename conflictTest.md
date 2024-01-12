@@ -1,2 +1,3 @@
 # I am adding text to this file as a way to understand github
 # Your puny mortal minds cannot begin to comprehend what plans I have for this file...
+# Hey guys I'm Fred
