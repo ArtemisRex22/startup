@@ -1,2 +1,2 @@
 # Git experience
-## I really had a difficult time with this at first, but after a few hours of dedicated practice, I feel that I am in a very good position to learn how getting good at using this wil increase my productivity and make me a better addition to society.
+## I really had a difficult time with this at first, but after a few hours of dedicated practice, I feel that I am in a very good position to learn how getting good at using this will increase my productivity and make me a better addition to society.
