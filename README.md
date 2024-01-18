@@ -15,4 +15,5 @@ Technologies:
 - DB/Login - Store users and customized books in database. Will be used for registration, password, and usernames.<br>
 - WebSocket - Wen a user submits a book, that book is uploaded to the database and displayed on the bookshelf.<br>
 - React - Application ported to use the React web framework.<br>
+![Diagram of plan for the project](https://github.com/ArtemisRex22/startup/blob/main/Doc%20Jan%2018%2C%202024%2C%2012.27-1.jpg)
 Repository created for BYU CS 260
