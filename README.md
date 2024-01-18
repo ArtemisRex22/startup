@@ -6,7 +6,7 @@ Key Features: <br>
 * Various customization combinations. <br>
 * A real-time worldwide bookshelf showcasing everyone's books. <br>
 * A simple but pleasant background in which to create your book. <br>
-* A simple GUI that will make for easy customization. 
+* A simple GUI that will make for easy customization. <br>
 Technologies:<br>
 - HTML - This uses correc HTML structure. One for login, one for customization, and one for online bookshelf.<br>
 - CSS - Customization is the heart of this project so CSS will make not only the books pretty to look at but the environment of the website itself.<br>
