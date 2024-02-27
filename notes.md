@@ -75,11 +75,21 @@ Control keys:
     CTRL-R - Recall command
     CTRL-Z - Background command
 VIM = Visual instrument improved
+    Old but valuable console editors
 # 1.5
 Linus Torvalds invented Linux and Git
 Version repository for a directory
     Allows for repository collaboration
 It allows you to track versions of files in a directory, and it allowsyou to to clone all of those versions to a different location.
+Commands:
+    add - establishes what file you're working with
+    commit - Commits changes that you've made to the file with notes  
+    push - Actually adds the changes that you've made to github
+    pull - You convert your version of the file to github's version
+    clone - You copy a file from github to your computer
+    fetch - You can get the latest information about the repository in github
+    status - You can see the differences between your repository and the one in github
+
 # 1.6 Github
 
 # 2.1 Stack, EC2 & Route 53
@@ -88,21 +98,35 @@ Technology Stack:
     Caddy 2
     Node
     MongoDB
+    There is no specific technologies that you should use for specific things in your web application, usually you will use what is generally commercially used together.
+    Dependability, support, scalability, performance, and security are all important factors.
 EC2 refers to the server
 Route53 refers to the domain name
+
 # 2.3 Caddy, HTTPS, TLS, certs
-caddy
+caddy  
+    Caddy is a web service that listens for incoming HTTP requests
+    It will either serve the requested static files or routes the request to another web service. This ability to route requests is called a gateway, or revers proxy.
+    Important files
+        Configuration file
+            Contains the definitions for routing HTTP requests that caddy recieves. ~/Caddyfile
+        HTML files
+            The directory of files that Caddy serves up when requests are made to the root of your web server. This is configured in the caddy file.
 HTTPS & TLS
 Web Certificates
     Security Credential
 # 3.1 HTML
+HTML elements are represented with enclosing tags that may enclose other elements or text. The paragraph tag p is an example of an element
 The Structure
-    <html lang="en">
-    </html>
+    "<html lang="en">"
+    "</html>"
 In this case the open tag is the whole first line
 The attribute is lang
 The attribute value is "en"
 and the second line is the close tag
+ID and class are classic examples of attributes.
+id gives a unique ID to the element
+Class designates the element as being classified into a named group of elements
 Link References:
     Absolute
     Relative (They are relative if the href has a / after it (a href="profile.png" /))
@@ -110,6 +134,8 @@ Elements and their meanings
     html - The page containe
     head - Header information
     title - Title of the page
+    meta - Metadata for the page sch as charcter set or viewport settings  
+    script - JavaScript reference, either an external reference or inline
     body - The entire content body of the page
     header - Header content
     main - Main content of the page
@@ -123,9 +149,22 @@ Elements and their meanings
     ol,ul - Ordered or unordered list
     a - Anchor text to a hyperlink
     img - Graphical image reference
+You can use special characters but you have to define them by using the entity syntax  
+    & = &amp
+    < = &lt
+    > = &gt
+    " = &quot
+    ' = &apos
+    Even emojis
 # 3.2
     Simon Startup, hands on info about HTML for startup
 # 3.3 CSS
+CSS = Style
+There are three different ways to associate CSS with HTML, one is to use a style attribute of an HTML element and explicitly assign one or more declarations.
+The other way is to define CSS rules in the HTML document using the HTML style element. It should appear in the head element of the document so that the rules apply to all elements of the document.
+The final way is to associate the CSS with the HTML link element to create a hyperlink reference to an external file containing CSS rules.
+Generally using the link element is preferred.
+A declaration property defined at a lower level will override the higher declaration.
     Syntax
     p {
         color: green;
@@ -164,6 +203,7 @@ Declarations:
         vmin - A percentage of the viewport's smaller dimension
         vmax - A percentage of the viewport's larger dimension
         Where a viewport is the display screen of the thing you are accessing the website on
+Selector is the defining factor of what is being changed in your program. The declaration is what you are changing the selected parts of your website to be (red, a different font, bouncing)
 # 3.4
 Fonts, animation, practice
 @font-face {
@@ -217,11 +257,11 @@ Float:
         border: black solid thin;
     }
 Display:
-    none
-    block
-    inline
-    flex
-    grid
+    none - Don't display this element. The element still exists, but the browser will not render it
+    block - Display this elemetn with a width that fills its parent element. A p or div element has block display by default
+    inline - Display this element with a width that is only as big as its content
+    flex - Display this element's children in a flexible orientation
+    grid - Display this element's children in a grid orientation
 Grid:
     <div class="container">
         ... many other div objects to represent individual cells of a grid
@@ -232,6 +272,7 @@ Grid:
     } 
 Flex:
     Flex influences how much different parts of a page can be changed around to different sizes 
+    It is a much more flexible grid that will optimize a website best depending on the size of the screen
     body {
         display: flex;
         flex-direction: column
@@ -257,7 +298,7 @@ Media Queries:
             display: none;
         }
     }
-    You can also do it for header and footer, the main purpose of this is to flex media on a page, like images and the like.
+    You can also do it for header and footer, Media queries can make parts of a page that you don't want disappear entirely.
 
 # 3.6
     Hands-on debugging stuff, not any information likely to be on a test
@@ -318,42 +359,42 @@ Common JS Modules:
     import { alertDisplay } from './alert.js';
     alertDisplay('called from main.js');
 
-    index.html
+    index.html  
 
-    <html>
-      <body>
-        <script type="module">
-          import ( alertDisplay ) from '.alert.js';
-          window.btnClick = alertDisplay;
-        </script>
-        <button onclick="btnClick('called from index.html')">
-          Press me
-        </button>
-      </body>
-    </html>
+    <html>  
+      <body>  
+        <script type="module">  
+          import ( alertDisplay ) from '.alert.js';  
+          window.btnClick = alertDisplay;  
+        </script>  
+        <button onclick="btnClick('called from index.html')">  
+          Press me  
+        </button>  
+      </body>  
+    </html>  
 
 # 4.5
-Promises, async/await
-Browser rendering is single threaded
-Everthing must be asynchronous
-Promise
-    pending - Currently running asychronously
-    fulfilled - Completed successfully
-    rejected - Failed to complete
-    Syntax
-        new Promise((resolve, reject) => resolve(true))
-        resolve is the callback
-        resolve(true) is the return
-async/await
-    Syntax:
-        try {
-            const result = await promisesample;
-            console.log("Toss result ${result}');
-        }   catch (err) {
-            console.error('Error: ${err}');
-        }   finally {
-            console.log('Toss completed);
-        }
-    Rule for using await
-        top level module function or called from an async function
-    Remember that async will auto-generate a promise if not explicitly returned
+Promises, async/await  
+Browser rendering is single threaded  
+Everthing must be asynchronous  
+Promise  
+    pending - Currently running asychronously  
+    fulfilled - Completed successfully  
+    rejected - Failed to complete  
+    Syntax  
+        new Promise((resolve, reject) => resolve(true))  
+        resolve is the callback  
+        resolve(true) is the return  
+async/await  
+    Syntax:  
+        try {  
+            const result = await promisesample;  
+            console.log("Toss result ${result}');  
+        }   catch (err) {  
+            console.error('Error: ${err}');  
+        }   finally {  
+            console.log('Toss completed);  
+        }  
+    Rule for using await  
+        top level module function or called from an async function  
+    Remember that async will auto-generate a promise if not explicitly returned  
