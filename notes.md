@@ -359,7 +359,7 @@ Arrow functions
 Arrow functions cannot be used for constructors or iterator generators.
 
 # 4.3
-JavaScript Object Notation(JSON) was conceived by DOuglas Crockford in 2001
+JavaScript Object Notation(JSON) was conceived by Douglas Crockford in 2001
 A JSON document contains one of the following data types:  
 String
 Number
@@ -368,6 +368,23 @@ Array
 Object
 Null
 JSON is always encoded with UTF-8, this allows for the representation of global data.
+You can convert JSON to nd from JS using the JSON.parse and JSON.stringify functions
+Rest:
+    JS provides the rest syntax to make making a function with an unknown number of parameters easier. To turn the last parameter of any function into a rest parameter you prefix it with three periods. You can call it with any number of parameters and they are all automatically combined inton an array.
+Spread:
+    Does the opposite of rest, it takes an object that is iterable, and expands it into a function's parameters.
+Destructuring:
+    The process of pulling individual items out of an existing one.
+Scope:
+    Global
+    Module
+    Function
+    Block
+Generally you will use const to declare a variable
+This represents a variable that points to an object that contains the context within the scope of the currently executing line of code. The this variable is automatically declared and you can reference this anywhere in a JS program.
+When this is used outside of a function it refers to the global this object which is the browser's window object.
+If used inside a function, it refers to the object that owns that function.
+If used inside an object it refers to the object.
 # 4.4
 Document object model (DOM)
 Event handlers
