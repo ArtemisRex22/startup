@@ -387,6 +387,9 @@ If used inside a function, it refers to the object that owns that function.
 If used inside an object it refers to the object.
 # 4.4
 Document object model (DOM)
+    It is an object representation of the HTML elements that the browser uses to render the display. The browser also exposes the DOM to external code so that you can write programs that dynamically manipulate the HTML.
+    Everything in an HTML document is a node in the DOM, and it appears as a big CS tree in the DOM.
+    The document variable lets you access the DOM
 Event handlers
     Event categories:
         Clipboard - Cu, copied, pasted
@@ -428,6 +431,7 @@ Common JS Modules:
 Promises, async/await  
 Browser rendering is single threaded  
 Everthing must be asynchronous  
+If something is going to take a long time to render using JS because your program (at least for JS) can only do one thing at a time. So you should run it in a JS promise.
 Promise  
     pending - Currently running asychronously  
     fulfilled - Completed successfully  
@@ -437,6 +441,7 @@ Promise
         resolve is the callback  
         resolve(true) is the return  
 async/await  
+    Essentially a more concise representation of a chain of promises. 
     Syntax:  
         try {  
             const result = await promisesample;  
