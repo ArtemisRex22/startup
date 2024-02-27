@@ -333,7 +333,41 @@ Media Queries:
 
     console.log(result);
 
-    JS example^
+    <head>
+        <script src="javascript.js"></script>
+    </head>
+    <body>
+        <button onclick="sayHello()">Say Hello</button>
+    <button onclick="sayGoodbye()">Say Goodbye</button>
+        <script>
+        function sayGoodbye() {
+        alert('Goodbye');
+        }
+        </script>
+    </body>
+JS examples^^^
+
+# 4.2
+Arrow functions
+    a.sort(function (v1, v2) {
+  return v1 - v2;
+    });
+
+    // arrow function syntax
+    a.sort((v1, v2) => v1 - v2);
+    These two functions are the same, the second is in arrow function syntax^^^
+Arrow functions cannot be used for constructors or iterator generators.
+
+# 4.3
+JavaScript Object Notation(JSON) was conceived by DOuglas Crockford in 2001
+A JSON document contains one of the following data types:  
+String
+Number
+Boolean
+Array
+Object
+Null
+JSON is always encoded with UTF-8, this allows for the representation of global data.
 # 4.4
 Document object model (DOM)
 Event handlers
